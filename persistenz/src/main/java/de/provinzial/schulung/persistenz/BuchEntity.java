@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class BuchEntity {
@@ -14,52 +16,33 @@ public class BuchEntity {
 	private Double preis;
 	private String name;
 
-	/**
-	 *
-	 */
+	@ManyToOne
+	@JoinColumn(name = "autor_id")
+	private AutorEntity autor;
+
 	public BuchEntity() {
 		super();
 	}
 
-	/**
-	 * @param id
-	 * @param preis
-	 * @param name
-	 */
-	public BuchEntity(Double preis, String name) {
+	public BuchEntity(Double preis, String name, AutorEntity autor) {
 		super();
 		this.preis = preis;
 		this.name = name;
+		this.autor = autor;
 	}
 
-	/**
-	 * Antwortet das Attribut {@link #preis}.
-	 * @return das Attribut {@link #preis}
-	 */
 	public Double getPreis() {
 		return this.preis;
 	}
 
-	/**
-	 * Setzt das Attribut {@link #preis}.
-	 * @param preis
-	 */
 	public void setPreis(Double preis) {
 		this.preis = preis;
 	}
 
-	/**
-	 * Antwortet das Attribut {@link #name}.
-	 * @return das Attribut {@link #name}
-	 */
 	public String getName() {
 		return this.name;
 	}
 
-	/**
-	 * Setzt das Attribut {@link #name}.
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}

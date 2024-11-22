@@ -1,6 +1,9 @@
 package de.provinzial.schulung.persistenz;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -20,7 +23,8 @@ public class AutorEntity {
 	private String name;
 
 	@OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<BuchEntity> books;
+	@JsonManagedReference
+	private Set<BuchEntity> buecher = new HashSet<>();
 
 	public AutorEntity() {
 		super();
@@ -47,12 +51,12 @@ public class AutorEntity {
 		this.name = name;
 	}
 
-	public List<BuchEntity> getBooks() {
-		return this.books;
+	public Set<BuchEntity> getBuecher() {
+		return this.buecher;
 	}
 
-	public void setBooks(List<BuchEntity> books) {
-		this.books = books;
+	public void setBuecher(Set<BuchEntity> buecher) {
+		this.buecher = buecher;
 	}
 
 }

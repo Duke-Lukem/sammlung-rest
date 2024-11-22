@@ -1,5 +1,7 @@
 package de.provinzial.schulung.persistenz;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class BuchEntity {
 
 	@ManyToOne
 	@JoinColumn(name = "autor_id")
+	@JsonBackReference
 	private AutorEntity autor;
 
 	public BuchEntity() {
@@ -45,6 +48,14 @@ public class BuchEntity {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public AutorEntity getAutor() {
+		return this.autor;
+	}
+
+	public void setAutor(AutorEntity autor) {
+		this.autor = autor;
 	}
 
 }

@@ -1,7 +1,5 @@
 package de.provinzial.schulung.service.mapper;
 
-import java.util.stream.Collectors;
-
 import org.springframework.stereotype.Component;
 
 import de.provinzial.schulung.persistenz.AutorEntity;
@@ -17,10 +15,7 @@ public class AutorMapper {
 	}
 
 	public AutorDTO toDTO(AutorEntity author) {
-		return new AutorDTO(author.getId(), author.getName(), author.getBuecher()
-				.stream()
-				.map(this.buchMapper::toDTO)
-				.collect(Collectors.toList()));
+		return new AutorDTO(author.getId(), author.getName());
 	}
 
 	public AutorEntity toEntity(AutorDTO AutorDTO) {

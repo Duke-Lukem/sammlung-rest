@@ -34,8 +34,12 @@ public class BuchService {
 		return this.buecherRepository.findById(id).map(this.buchMapper::toDTO);
 	}
 
+	public List<BuchDTO> getBuecherVonAutor(Long id) {
+		return this.buecherRepository.findByAutorId(id).stream().map(this.buchMapper::toDTO).collect(Collectors.toList());
+	}
+
 	public BuchDTO createBuch(BuchDTO buchDTO) {
-		AutorEntity author = this.autorRepository.findById(buchDTO.getAuthorId())
+		AutorEntity author = this.autorRepository.findById(buchDTO.getAutorId())
 				.orElseThrow(() -> new RuntimeException("Autor not found"));
 
 		BuchEntity book = this.buchMapper.toEntity(buchDTO, author);

@@ -5,7 +5,7 @@ public class BuchDTO {
 	private Long id;
 	private Double preis;
 	private String name;
-	private Long authorId;
+	private Long autorId;
 
 	// Standard-Konstruktor
 	public BuchDTO() {
@@ -22,7 +22,7 @@ public class BuchDTO {
 		this.id = id;
 		this.preis = preis;
 		this.name = name;
-		this.authorId = authorId;
+		this.autorId = authorId;
 	}
 
 	public Long getId() {
@@ -49,12 +49,12 @@ public class BuchDTO {
 		this.name = name;
 	}
 
-	public Long getAuthorId() {
-		return this.authorId;
+	public Long getAutorId() {
+		return this.autorId;
 	}
 
-	public void setAuthorId(Long authorId) {
-		this.authorId = authorId;
+	public void setAutorId(Long authorId) {
+		this.autorId = authorId;
 	}
 
 }

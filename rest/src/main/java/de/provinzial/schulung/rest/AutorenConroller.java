@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import de.provinzial.schulung.service.AutorService;
+import de.provinzial.schulung.service.BuchService;
 import de.provinzial.schulung.service.model.AutorDTO;
 import de.provinzial.schulung.service.model.BuchDTO;
 
@@ -19,6 +20,8 @@ public class AutorenConroller {
 
 	@Autowired
 	private AutorService autorService;
+	@Autowired
+	private BuchService buechService;
 
 	@GetMapping()
 	public List<AutorDTO> getAutoren() {
@@ -41,7 +44,7 @@ public class AutorenConroller {
 
 		Optional<AutorDTO> autor = this.autorService.getAutor(id);
 
-		List<BuchDTO> buecher = autor.get().getBuecher();
+		List<BuchDTO> buecher = this.buechService.getBuecherVonAutor(id);
 
 		return buecher;
 	}

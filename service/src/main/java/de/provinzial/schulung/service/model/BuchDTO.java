@@ -1,19 +1,27 @@
 package de.provinzial.schulung.service.model;
 
-public class BookDTO {
+public class BuchDTO {
 
 	private Long id;
-	private String title;
+	private Double preis;
+	private String name;
 	private Long authorId;
 
 	// Standard-Konstruktor
-	public BookDTO() {
+	public BuchDTO() {
 	}
 
-	// Konstruktor mit Parametern
-	public BookDTO(Long id, String title, Long authorId) {
+	/**
+	 * @param id
+	 * @param preis
+	 * @param name
+	 * @param authorId
+	 */
+	public BuchDTO(Long id, Double preis, String name, Long authorId) {
+		super();
 		this.id = id;
-		this.title = title;
+		this.preis = preis;
+		this.name = name;
 		this.authorId = authorId;
 	}
 
@@ -25,12 +33,20 @@ public class BookDTO {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return this.title;
+	public Double getPreis() {
+		return this.preis;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setPreis(Double preis) {
+		this.preis = preis;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Long getAuthorId() {

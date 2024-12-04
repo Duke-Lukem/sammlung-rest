@@ -2,7 +2,6 @@ package de.provinzial.schulung.rest;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,44 +9,41 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.provinzial.schulung.persistenz.AutorEntity;
-import de.provinzial.schulung.persistenz.AutorenRepository;
-import de.provinzial.schulung.persistenz.BuchEntity;
+import de.provinzial.schulung.service.AutorService;
+import de.provinzial.schulung.service.model.AutorDTO;
+import de.provinzial.schulung.service.model.BuchDTO;
 
 @RestController
 @RequestMapping("/autoren")
 public class AutorenConroller {
 
 	@Autowired
-	private AutorenRepository autorenRepository;
+	private AutorService autorService;
 
 	@GetMapping()
-	public List<AutorEntity> getAutoren() {
+	public List<AutorDTO> getAutoren() {
 
-		List<AutorEntity> buecher = this.autorenRepository.findAll();
+		List<AutorDTO> buecher = this.autorService.getAllAutoren();
 
 		return buecher;
 	}
 
 	@GetMapping("/{id}")
-	public AutorEntity getAutor(@PathVariable Long id) {
+	public AutorDTO getAutor(@PathVariable Long id) {
 
-		Optional<AutorEntity> autor = this.autorenRepository.findById(id);
+		Optional<AutorDTO> autor = this.autorService.getAutor(id);
 
 		return autor.get();
 	}
 
 	@GetMapping("/{id}/buecher")
-	public AutorEntity getAutorBuecher(@PathVariable Long id) {
+	public List<BuchDTO> getAutorBuecher(@PathVariable Long id) {
 
-		Optional<AutorEntity> autor = this.autorenRepository.findById(id);
-		Set<BuchEntity> buecher = autor.get().getBuecher();
-		AutorEntity autorEntity = new AutorEntity(autor.get().getName());
-		buecher.forEach(buch -> {
-			autorEntity.getBuecher().add(buch);
-		});
+		Optional<AutorDTO> autor = this.autorService.getAutor(id);
 
-		return autorEntity;
+		List<BuchDTO> buecher = autor.get().getBuecher();
+
+		return buecher;
 	}
 
 }

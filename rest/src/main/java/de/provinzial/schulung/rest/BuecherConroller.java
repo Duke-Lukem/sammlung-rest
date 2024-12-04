@@ -9,28 +9,28 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.provinzial.schulung.persistenz.BuchEntity;
-import de.provinzial.schulung.persistenz.BuecherRepository;
+import de.provinzial.schulung.service.BuchService;
+import de.provinzial.schulung.service.model.BuchDTO;
 
 @RestController
 @RequestMapping("/buecher")
 public class BuecherConroller {
 
 	@Autowired
-	private BuecherRepository buecherRepository;
+	private BuchService buchService;
 
 	@GetMapping()
-	public List<BuchEntity> getAllBooks() {
+	public List<BuchDTO> getAllBooks() {
 
-		List<BuchEntity> buecher = this.buecherRepository.findAll();
+		List<BuchDTO> buecher = this.buchService.getAllBuecher();
 
 		return buecher;
 	}
 
 	@GetMapping("/{id}")
-	public BuchEntity getBook(@PathVariable Long id) {
+	public BuchDTO getBook(@PathVariable Long id) {
 
-		Optional<BuchEntity> buch = this.buecherRepository.findById(id);
+		Optional<BuchDTO> buch = this.buchService.getBuch(id);
 
 		return buch.get();
 	}

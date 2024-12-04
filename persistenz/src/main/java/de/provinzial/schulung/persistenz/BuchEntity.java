@@ -34,6 +34,14 @@ public class BuchEntity {
 		this.autor = autor;
 	}
 
+	public Long getId() {
+		return this.id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Double getPreis() {
 		return this.preis;
 	}

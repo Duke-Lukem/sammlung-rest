@@ -2,21 +2,21 @@ package de.provinzial.schulung.service.model;
 
 import java.util.List;
 
-public class AuthorDTO {
+public class AutorDTO {
 
 	private Long id;
 	private String name;
-	private List<BookDTO> books;
+	private List<BuchDTO> buecher;
 
 	// Standard-Konstruktor
-	public AuthorDTO() {
+	public AutorDTO() {
 	}
 
 	// Konstruktor mit Parametern
-	public AuthorDTO(Long id, String name, List<BookDTO> books) {
+	public AutorDTO(Long id, String name, List<BuchDTO> buecher) {
 		this.id = id;
 		this.name = name;
-		this.books = books;
+		this.buecher = buecher;
 	}
 
 	public Long getId() {
@@ -35,12 +35,12 @@ public class AuthorDTO {
 		this.name = name;
 	}
 
-	public List<BookDTO> getBooks() {
-		return this.books;
+	public List<BuchDTO> getBuecher() {
+		return this.buecher;
 	}
 
-	public void setBooks(List<BookDTO> books) {
-		this.books = books;
+	public void setBuecher(List<BuchDTO> buecher) {
+		this.buecher = buecher;
 	}
 
 }

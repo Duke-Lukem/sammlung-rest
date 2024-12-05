@@ -33,14 +33,15 @@ public class DatabaseInitializer
 		this.autorenRepository.save(author5);
 
 		// Bücher einfügen
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "Harry Potter and the Philosopher's Stone", author1));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "Harry Potter and the Chamber of Secrets", author1));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "A Game of Thrones", author2));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "A Clash of Kings", author2));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "The Fellowship of the Ring", author3));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "The Two Towers", author3));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "Murder on the Orient Express", author4));
-		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "The Shining", author5));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("22.90"), "Harry Potter und der Stein der Weisen", author1));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("24.90"), "Harry Potter und die Kammer des Schreckens",
+				author1));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("25.90"), "Das Lied von Eis und Feuer", author2));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("26.90"), "Ein Spiel der Throne", author2));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("27.90"), "Der Herr der Ringe Die Gefährten", author3));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("28.90"), "Der Herr der Ringe Die zwei Türme", author3));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("29.90"), "Mord im Orientexpress", author4));
+		this.buecherRepository.save(new BuchEntity(Double.valueOf("30.90"), "The Shining", author5));
 
 	}
 }

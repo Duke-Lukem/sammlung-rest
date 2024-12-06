@@ -1,8 +1,8 @@
 package de.provinzial.schulung.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,19 @@ public class AutorService {
 	private AutorMapper autorMapper;
 
 	public List<AutorDTO> getAllAutoren() {
-		return this.autorenRepository.findAll().stream().map(this.autorMapper::toDTO).collect(Collectors.toList());
+		//		return autorPersist.stream().map(this.autorMapper::toDTO).collect(Collectors.toList());
+
+		List<AutorDTO> liste = new ArrayList<>();
+
+		List<AutorEntity> autorPersist = this.autorenRepository.findAll();
+
+		autorPersist.forEach(autorE -> {
+			AutorDTO dto = this.autorMapper.toDTO(autorE);
+			liste.add(dto);
+		});
+
+		return liste;
+
 	}
 
 	public Optional<AutorDTO> getAutor(Long id) {

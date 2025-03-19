@@ -46,6 +46,9 @@
 				<column name="PREIS" type="DECIMAL(16,2)">
 					<constraints nullable="false"/>
 				</column>
+				<column name="ISBN" type="VARCHAR(255)">
+					<constraints nullable="false"/>
+				</column>       
 				<column name="AUTOR_ID" type="INTEGER">
 					<constraints nullable="false"/>
 				</column> 
@@ -80,15 +83,13 @@
 			</preConditions>
 			<!-- Create Table -->
 			<sql>
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (22.90, 'Harry Potter und der Stein der Weisen', 1);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (24.90, 'Harry Potter und die Kammer des Schreckens', 1);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (25.90, 'Das Lied von Eis und Feuer', 2);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (26.90, 'Ein Spiel der Throne', 2);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (27.90, 'Der Herr der Ringe Die Gefährten', 3);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (28.90, 'Der Herr der Ringe Die zwei Türme', 3);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (29.90, 'Mord im Orientexpress', 4);
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (30.90, 'The Shining', 5);
-
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (22.90, 'Harry Potter und der Stein der Weisen', 1, '9783551551672');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.90, 'Harry Potter und die Kammer des Schreckens', 1, '9783551354020');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (25.90, 'Das Lied von Eis und Feuer', 2, '978-3442267743');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (27.90, 'Der Herr der Ringe Die Gefährten', 3, '978-3-608-93981-1');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (28.90, 'Der Herr der Ringe Die zwei Türme', 3, '978-3-608-93982-8');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (29.90, 'Mord im Orientexpress', 4, '978-3-455-65001-3');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (30.90, 'The Shining', 5, '978-0-307-74365-7');
 			</sql>
 			<comment>Inserted new record in table 'Buch_Entity'</comment>
 		</changeSet>

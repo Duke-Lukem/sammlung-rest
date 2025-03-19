@@ -5,23 +5,19 @@ public class BuchDTO {
 	private Long id;
 	private Double preis;
 	private String name;
+	private String isbn;
 	private Long autorId;
 
 	// Standard-Konstruktor
 	public BuchDTO() {
 	}
 
-	/**
-	 * @param id
-	 * @param preis
-	 * @param name
-	 * @param authorId
-	 */
-	public BuchDTO(Long id, Double preis, String name, Long authorId) {
+	public BuchDTO(Long id, Double preis, String name, String isbn, Long authorId) {
 		super();
 		this.id = id;
 		this.preis = preis;
 		this.name = name;
+		this.isbn = isbn;
 		this.autorId = authorId;
 	}
 
@@ -47,6 +43,14 @@ public class BuchDTO {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getIsbn() {
+		return this.isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
 	}
 
 	public Long getAutorId() {

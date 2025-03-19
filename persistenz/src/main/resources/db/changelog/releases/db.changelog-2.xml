@@ -25,12 +25,18 @@
 			</preConditions>
 			<!-- Create Table -->
 			<sql>
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (14.99, 'Bartimäus - Das Amulett von Samarkand', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'));
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (15.99, 'Bartimäus - Das Auge des Golem', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'));
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (16.99, 'Bartimäus - Die Pforte des Magiers', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'));
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id) VALUES (17.99, 'Bartimäus - Der Ring des Salomo', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'));
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (14.99, 'Bartimäus - Das Amulett von Samarkand', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '9783570216958');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (15.99, 'Bartimäus - Das Auge des Golem', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '978-3-442-37003-0');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (16.99, 'Bartimäus - Die Pforte des Magiers', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '978-3-442-37333-8');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (17.99, 'Bartimäus - Der Ring des Salomo', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '9783570223048');
 			</sql>
 			<comment>Inserted new record in table 'Buch_Entity'</comment>
 		</changeSet>
+		
+		<changeSet id="1" author="yourname">
+		    <customChange class="de.provinzial.schulung.persistenz.MyCustomChange">
+		    </customChange>
+		</changeSet>
+		
 		
 	</databaseChangeLog>

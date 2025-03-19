@@ -6,7 +6,7 @@
 			xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 	
-		<changeSet author="W102350" id="1 Created new table">
+		<changeSet author="W102350" id="1.1 Created new table">
 			<!-- Validations -->
 			<preConditions>
 				<not>
@@ -28,7 +28,7 @@
 			</rollback>
 			<comment>Created new table named 'Autor_Entity'</comment>
 		</changeSet>
-		<changeSet author="W102350" id="2 Created new table">
+		<changeSet author="W102350" id="1.2 Created new table">
 			<!-- Validations -->
 			<preConditions>
 				<not>
@@ -60,7 +60,7 @@
 			<comment>Created new table named 'Buch_Entity'</comment>
 		</changeSet>
 		
-		<changeSet author="W102350" id="1 Inserted data in Autor table">
+		<changeSet author="W102350" id="1.3 Inserted data in Autor table">
 			<!-- Validations -->
 			<preConditions>
 				<tableExists tableName="AUTOR_ENTITY"/>
@@ -68,29 +68,45 @@
 			<!-- Create Table -->
 			<sql>
 				INSERT INTO AUTOR_ENTITY (name) VALUES ('J.K. Rowling');
-				INSERT INTO AUTOR_ENTITY (name) VALUES ('George R.R. Martin');
 				INSERT INTO AUTOR_ENTITY (name) VALUES ('J.R.R. Tolkien');
-				INSERT INTO AUTOR_ENTITY (name) VALUES ('Agatha Christie');
-				INSERT INTO AUTOR_ENTITY (name) VALUES ('Stephen King');
+				INSERT INTO AUTOR_ENTITY (name) VALUES ('George R. R. Martin');
 			</sql>
 			<comment>Inserted new record in table 'Autor_Entity'</comment>
 		</changeSet>
 		
-		<changeSet author="W102350" id="2 Inserted data in Buch table">
+		<changeSet author="W102350" id="1.4 Inserted data in Buch table">
 			<!-- Validations -->
 			<preConditions>
 				<tableExists tableName="BUCH_ENTITY"/>
 			</preConditions>
 			<!-- Create Table -->
 			<sql>
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (22.90, 'Harry Potter und der Stein der Weisen', 1, '9783551551672');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.90, 'Harry Potter und die Kammer des Schreckens', 1, '9783551354020');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (25.90, 'Das Lied von Eis und Feuer', 2, '978-3442267743');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (27.90, 'Der Herr der Ringe Die Gefährten', 3, '978-3-608-93981-1');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (28.90, 'Der Herr der Ringe Die zwei Türme', 3, '978-3-608-93982-8');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (29.90, 'Mord im Orientexpress', 4, '978-3-455-65001-3');
-				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (30.90, 'The Shining', 5, '978-0-307-74365-7');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (20.99, 'Harry Potter und der Stein der Weisen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551551672');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (21.99, 'Harry Potter und die Kammer des Schreckens', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551354020');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (22.99, 'Harry Potter und der Gefangene von Askaban', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551354037');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (23.99, 'Harry Potter und der Feuerkelch', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551551931');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Harry Potter und der Orden des Phönix', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551555557');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (25.99, 'Harry Potter und der Halbblutprinz', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551566669');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (26.99, 'Harry Potter und die Heiligtümer des Todes', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551577771');
+				
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (18.99, 'Der Herr der Ringe: Die Gefährten', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939811');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (19.99, 'Der Herr der Ringe: Die Zwei Türme', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939828');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (20.99, 'Der Herr der Ringe: Die Rückkehr des Königs', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939835');
+				
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Die Herren von Winterfell', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442267743');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Das Erbe von Winterfell', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442267811');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Der Thron der Sieben Königreiche', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442268221');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Die Saat des goldenen Löwen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442268214');
+<!-- 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Sturm der Schwerter', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '344226846X'); -->
+<!-- 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Die Königin der Drachen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442268474'); -->
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Zeit der Krähen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442268597');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Die dunkle Königin', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783442268603');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Der Sohn des Greifen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783764531041');
+<!-- 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (24.99, 'Ein Tanz mit Drachen', (SELECT id FROM AUTOR_ENTITY WHERE name = 'George R. R. Martin'), '9783764531027'); -->
 			</sql>
 			<comment>Inserted new record in table 'Buch_Entity'</comment>
 		</changeSet>
+		
+		
+		
 	</databaseChangeLog>

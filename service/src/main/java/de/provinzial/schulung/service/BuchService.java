@@ -49,4 +49,9 @@ public class BuchService {
 		book = this.buecherRepository.save(book);
 		return this.buchMapper.toDTO(book);
 	}
+
+	public boolean deleteBuch(Long id) {
+		this.buecherRepository.deleteById(id);
+		return true;
+	}
 }

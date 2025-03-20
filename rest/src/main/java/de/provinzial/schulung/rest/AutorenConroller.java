@@ -52,9 +52,8 @@ public class AutorenConroller {
 	}
 
 	@PostMapping()
-	public AutorDTO createAutor(@RequestBody String name) {
-		AutorDTO autorDTO = new AutorDTO(null, name);
-		AutorDTO author = this.autorService.createAuthor(autorDTO);
+	public AutorDTO createAutor(@RequestBody AutorDTO autor) {
+		AutorDTO author = this.autorService.createAuthor(autor);
 		return author;
 	}
 

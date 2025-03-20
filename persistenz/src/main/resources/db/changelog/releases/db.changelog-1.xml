@@ -89,6 +89,7 @@
 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (25.99, 'Harry Potter und der Halbblutprinz', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551566669');
 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (26.99, 'Harry Potter und die Heiligtümer des Todes', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.K. Rowling'), '9783551577771');
 				
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (17.99, 'Der kleine Hobbit', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783423202770');
 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (18.99, 'Der Herr der Ringe: Die Gefährten', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939811');
 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (19.99, 'Der Herr der Ringe: Die Zwei Türme', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939828');
 				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (20.99, 'Der Herr der Ringe: Die Rückkehr des Königs', (SELECT id FROM AUTOR_ENTITY WHERE name = 'J.R.R. Tolkien'), '9783608939835');

@@ -18,6 +18,8 @@ public class BuchEntity {
 	private Double preis;
 	private String name;
 	private String isbn;
+	private String auflage;
+	private String erscheinungsjahr;
 
 	@ManyToOne
 	@JoinColumn(name = "autor_id")
@@ -28,11 +30,13 @@ public class BuchEntity {
 		super();
 	}
 
-	public BuchEntity(Double preis, String name, String isbn, AutorEntity autor) {
+	public BuchEntity(Double preis, String name, String isbn, String auflage, String erscheinungsjahr, AutorEntity autor) {
 		super();
 		this.preis = preis;
 		this.name = name;
 		this.isbn = isbn;
+		this.auflage = auflage;
+		this.erscheinungsjahr = erscheinungsjahr;
 		this.autor = autor;
 	}
 
@@ -114,6 +118,38 @@ public class BuchEntity {
 	 */
 	public void setAutor(AutorEntity autor) {
 		this.autor = autor;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #auflage}.
+	 * @return das Attribut {@link #auflage}
+	 */
+	public String getAuflage() {
+		return this.auflage;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #auflage}.
+	 * @param auflage
+	 */
+	public void setAuflage(String auflage) {
+		this.auflage = auflage;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #erscheinungsjahr}.
+	 * @return das Attribut {@link #erscheinungsjahr}
+	 */
+	public String getErscheinungsjahr() {
+		return this.erscheinungsjahr;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #erscheinungsjahr}.
+	 * @param erscheinungsjahr
+	 */
+	public void setErscheinungsjahr(String erscheinungsjahr) {
+		this.erscheinungsjahr = erscheinungsjahr;
 	}
 
 }

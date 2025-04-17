@@ -6,7 +6,7 @@
 			xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 	
-		<changeSet author="W102350" id="2.1 Inserted data in Autor table">
+		<changeSet author="W102350" id="3.1 Inserted data in Autor table">
 			<!-- Validations -->
 			<preConditions>
 				<tableExists tableName="AUTOR_ENTITY"/>
@@ -18,7 +18,7 @@
 			<comment>Inserted new record in table 'Autor_Entity'</comment>
 		</changeSet>
 		
-		<changeSet author="W102350" id="2.2 Inserted data in Buch table">
+		<changeSet author="W102350" id="3.2 Inserted data in Buch table">
 			<!-- Validations -->
 			<preConditions>
 				<tableExists tableName="BUCH_ENTITY"/>

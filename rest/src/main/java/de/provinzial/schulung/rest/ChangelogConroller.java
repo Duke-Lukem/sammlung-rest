@@ -120,12 +120,21 @@ public class ChangelogConroller {
 		}
 
 		for (BuchDTO buch : alleBuecher) {
+			// @formatter:off
 			inserts += String.format("""
-					INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-					VALUES (%s, '%s', '%s', '%s', '%s', %s);
+				    INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
+				    VALUES (%s, %s, %s, %s, %s, %s);
+				    """,
+				    buch.getPreis() == null ? "NULL" : String.format("'%s'", buch.getPreis()),
+				    buch.getName() == null ? "NULL" : String.format("'%s'", buch.getName()),
+				    buch.getAuflage() == null ? "NULL" : String.format("'%s'", buch.getAuflage()),
+				    buch.getErscheinungsjahr() == null ? "NULL" : String.format("'%s'", buch.getErscheinungsjahr()),
+				    buch.getIsbn() == null ? "NULL" : String.format("'%s'", buch.getIsbn()),
+				    buch.getAutorId() == null ? "NULL" : buch.getAutorId().toString()
+				);
+			// @formatter:on
+			System.out.println(inserts);
 
-					""", buch.getPreis(), buch.getName(), buch.getAuflage(), buch.getErscheinungsjahr(), buch.getIsbn(), buch
-					.getAutorId());
 		}
 		return inserts;
 	}

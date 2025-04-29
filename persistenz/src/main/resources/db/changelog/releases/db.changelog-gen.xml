@@ -17,152 +17,103 @@ INSERT INTO AUTOR_ENTITY (id, name) VALUES (5, 'George R. R. Martin');
 INSERT INTO AUTOR_ENTITY (id, name) VALUES (6, 'Tyler Hamilton und Daniel Coyle');
 
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 1 - Das Abenteuer beginnt', '3.2003', 'January 1, 2001', '9783551745811', 1);
-
+VALUES ('5.0', 'ONE PIECE 1 - Das Abenteuer beginnt', '3.2003', 'January 1, 2001', '9783551745811', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 2 - Ruffy versus Buggy, der Clown', '3.2003', 'September 1, 2003', '9783551745828', 1);
-
+VALUES ('5.0', 'ONE PIECE 2 - Ruffy versus Buggy, der Clown', '3.2003', 'September 1, 2003', '9783551745828', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 3 - Die Suche geht weiter', '1.2001', '2001-02-15', '9783551745835', 1);
-
+VALUES ('5.0', 'ONE PIECE 3 - Die Suche geht weiter', '1.2001', '2001-02-15', '9783551745835', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 4 - Wolf im Schafspelz', '2.2003', '2001-02-15', '9783551745842', 1);
-
+VALUES ('5.0', 'ONE PIECE 4 - Wolf im Schafspelz', '2.2003', '2001-02-15', '9783551745842', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 5 - Wem schlägt jetzt die Stunde?', '2.2003', '2001-02-15', '9783551745859', 1);
-
+VALUES ('5.0', 'ONE PIECE 5 - Wem schlägt jetzt die Stunde?', '2.2003', '2001-02-15', '9783551745859', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 6 - Das Gelübde', '2.2003', '2001-02-15', '9783551745866', 1);
-
+VALUES ('5.0', 'ONE PIECE 6 - Das Gelübde', '2.2003', '2001-02-15', '9783551745866', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 7 - Der alte Mann', '2.2003', '2001-02-15', '9783551745873', 1);
-
+VALUES ('5.0', 'ONE PIECE 7 - Der alte Mann', '2.2003', '2001-02-15', '9783551745873', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 8 - Wehe, du stirbst!', '2.2003', '2001-02-15', '9783551745880', 1);
-
+VALUES ('5.0', 'ONE PIECE 8 - Wehe, du stirbst!', '2.2003', '2001-02-15', '9783551745880', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 9 - Tränen', '1.2001', '2001-02-15', '9783551745897', 1);
-
+VALUES ('5.0', 'ONE PIECE 9 - Tränen', '1.2001', '2001-02-15', '9783551745897', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 10 - O.K. Lets stand up!', '2.2003', '2001-02-15', '9783551756206', 1);
-
+VALUES ('5.0', 'ONE PIECE 10 - O.K. Lets stand up!', '2.2003', '2001-02-15', '9783551756206', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 11 - Der schlimmste Typ im Osten', '2.2003', '2001-02-15', '9783551756213', 1);
-
+VALUES ('5.0', 'ONE PIECE 11 - Der schlimmste Typ im Osten', '2.2003', '2001-02-15', '9783551756213', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 12 - Der Anfang der Legende', '2.2003', '2001-02-15', '9783551756220', 1);
-
+VALUES ('5.0', 'ONE PIECE 12 - Der Anfang der Legende', '2.2003', '2001-02-15', '9783551756220', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 13 - Dont worry!', '1.2002', '2001-02-15', '9783551756237', 1);
-
+VALUES ('5.0', 'ONE PIECE 13 - Dont worry!', '1.2002', '2001-02-15', '9783551756237', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 14 - Instinkt', '1.2002', '2001-02-15', '9783551756244', 1);
-
+VALUES ('5.0', 'ONE PIECE 14 - Instinkt', '1.2002', '2001-02-15', '9783551756244', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 15 - Volle Fahrt voraus', '1.2002', '2001-02-15', '9783551756251', 1);
-
+VALUES ('5.0', 'ONE PIECE 15 - Volle Fahrt voraus', '1.2002', '2001-02-15', '9783551756251', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 16 - Erfüllter Wille', '1.2002', '2001-02-15', '9783551756268', 1);
-
+VALUES ('5.0', 'ONE PIECE 16 - Erfüllter Wille', '1.2002', '2001-02-15', '9783551756268', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 17 - Baders Kirschbaum', '1.2002', '2001-02-15', '9783551756275', 1);
-
+VALUES ('5.0', 'ONE PIECE 17 - Baders Kirschbaum', '1.2002', '2001-02-15', '9783551756275', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 18 - Ace', '1.2002', '2001-02-15', '9783551756282', 1);
-
+VALUES ('5.0', 'ONE PIECE 18 - Ace', '1.2002', '2001-02-15', '9783551756282', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 19 - Rebellion', '1.2002', '2001-02-15', '9783551756299', 1);
-
+VALUES ('5.0', 'ONE PIECE 19 - Rebellion', '1.2002', '2001-02-15', '9783551756299', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 20 - Endkampf in Arbana', '1.2002', '2001-02-15', '9783551756305', 1);
-
+VALUES ('5.0', 'ONE PIECE 20 - Endkampf in Arbana', '1.2002', '2001-02-15', '9783551756305', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 21 - Utopia', '1.2002', '2001-02-15', '9783551756312', 1);
-
+VALUES ('5.0', 'ONE PIECE 21 - Utopia', '1.2002', '2001-02-15', '9783551756312', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 22 - Hope!!', '1.2002', '2001-02-15', '9783551756329', 1);
-
+VALUES ('5.0', 'ONE PIECE 22 - Hope!!', '1.2002', '2001-02-15', '9783551756329', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 23 - Vivis Abenteuer', '1.2003', '2003-12-01', '9783551756336', 1);
-
+VALUES ('5.0', 'ONE PIECE 23 - Vivis Abenteuer', '1.2003', '2003-12-01', '9783551756336', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 24 - Träume', '1.2003', '2001-02-15', '9783551756343', 1);
-
+VALUES ('5.0', 'ONE PIECE 24 - Träume', '1.2003', '2001-02-15', '9783551756343', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 25 - Der ist 100 Millionen wert!', '1.2003', '2003-06-22', '9783551756350', 1);
-
+VALUES ('5.0', 'ONE PIECE 25 - Der ist 100 Millionen wert!', '1.2003', '2003-06-22', '9783551756350', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (5.0, 'ONE PIECE 26 - Abenteuer auf der Insel Gottes', '1.2003', '2003-08-01', '9783551756367', 1);
-
+VALUES ('5.0', 'ONE PIECE 26 - Abenteuer auf der Insel Gottes', '1.2003', '2003-08-01', '9783551756367', 1);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (14.99, 'Bartimäus - Das Amulett von Samarkand', 'null', 'null', '9783570216958', 2);
-
+VALUES ('14.99', 'Bartimäus - Das Amulett von Samarkand', NULL, NULL, '9783570216958', 2);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (15.99, 'Bartimäus - Das Auge des Golem', 'null', 'null', '978-3-442-37003-0', 2);
-
+VALUES ('15.99', 'Bartimäus - Das Auge des Golem', NULL, NULL, '978-3-442-37003-0', 2);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (16.99, 'Bartimäus - Die Pforte des Magiers', 'null', 'null', '978-3-442-37333-8', 2);
-
+VALUES ('16.99', 'Bartimäus - Die Pforte des Magiers', NULL, NULL, '978-3-442-37333-8', 2);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (17.99, 'Bartimäus - Der Ring des Salomo', 'null', 'null', '9783570223048', 2);
-
+VALUES ('17.99', 'Bartimäus - Der Ring des Salomo', NULL, NULL, '9783570223048', 2);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (20.99, 'Harry Potter und der Stein der Weisen', 'null', 'null', '9783551551672', 3);
-
+VALUES ('20.99', 'Harry Potter und der Stein der Weisen', NULL, NULL, '9783551551672', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (21.99, 'Harry Potter und die Kammer des Schreckens', 'null', 'null', '9783551354020', 3);
-
+VALUES ('21.99', 'Harry Potter und die Kammer des Schreckens', NULL, NULL, '9783551354020', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (22.99, 'Harry Potter und der Gefangene von Askaban', 'null', 'null', '9783551354037', 3);
-
+VALUES ('22.99', 'Harry Potter und der Gefangene von Askaban', NULL, NULL, '9783551354037', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (23.99, 'Harry Potter und der Feuerkelch', 'null', 'null', '9783551551931', 3);
-
+VALUES ('23.99', 'Harry Potter und der Feuerkelch', NULL, NULL, '9783551551931', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Harry Potter und der Orden des Phönix', 'null', 'null', '9783551555557', 3);
-
+VALUES ('24.99', 'Harry Potter und der Orden des Phönix', NULL, NULL, '9783551555557', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (25.99, 'Harry Potter und der Halbblutprinz', 'null', 'null', '9783551566669', 3);
-
+VALUES ('25.99', 'Harry Potter und der Halbblutprinz', NULL, NULL, '9783551566669', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (26.99, 'Harry Potter und die Heiligtümer des Todes', 'null', 'null', '9783551577771', 3);
-
+VALUES ('26.99', 'Harry Potter und die Heiligtümer des Todes', NULL, NULL, '9783551577771', 3);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (17.99, 'Der kleine Hobbit', 'null', 'null', '9783423202770', 4);
-
+VALUES ('17.99', 'Der kleine Hobbit', NULL, NULL, '9783423202770', 4);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (18.99, 'Der Herr der Ringe: Die Gefährten', 'null', 'null', '9783608939811', 4);
-
+VALUES ('18.99', 'Der Herr der Ringe: Die Gefährten', NULL, NULL, '9783608939811', 4);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (19.99, 'Der Herr der Ringe: Die Zwei Türme', 'null', 'null', '9783608939828', 4);
-
+VALUES ('19.99', 'Der Herr der Ringe: Die Zwei Türme', NULL, NULL, '9783608939828', 4);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (20.99, 'Der Herr der Ringe: Die Rückkehr des Königs', 'null', 'null', '9783608939835', 4);
-
+VALUES ('20.99', 'Der Herr der Ringe: Die Rückkehr des Königs', NULL, NULL, '9783608939835', 4);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Die Herren von Winterfell', 'null', 'null', '9783442267743', 5);
-
+VALUES ('24.99', 'Die Herren von Winterfell', NULL, NULL, '9783442267743', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Das Erbe von Winterfell', 'null', 'null', '9783442267811', 5);
-
+VALUES ('24.99', 'Das Erbe von Winterfell', NULL, NULL, '9783442267811', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Der Thron der Sieben Königreiche', 'null', 'null', '9783442268221', 5);
-
+VALUES ('24.99', 'Der Thron der Sieben Königreiche', NULL, NULL, '9783442268221', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Die Saat des goldenen Löwen', 'null', 'null', '9783442268214', 5);
-
+VALUES ('24.99', 'Die Saat des goldenen Löwen', NULL, NULL, '9783442268214', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Zeit der Krähen', 'null', 'null', '9783442268597', 5);
-
+VALUES ('24.99', 'Zeit der Krähen', NULL, NULL, '9783442268597', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Die dunkle Königin', 'null', 'null', '9783442268603', 5);
-
+VALUES ('24.99', 'Die dunkle Königin', NULL, NULL, '9783442268603', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (24.99, 'Der Sohn des Greifen', 'null', 'null', '9783764531041', 5);
-
+VALUES ('24.99', 'Der Sohn des Greifen', NULL, NULL, '9783764531041', 5);
 INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id)
-VALUES (11.0, 'Die Radsport-Mafia und ihre schmutzigen Geschäfte', 'null', 'null', '9783492304092', 6);
-
+VALUES ('11.0', 'Die Radsport-Mafia und ihre schmutzigen Geschäfte', NULL, NULL, '9783492304092', 6);
 </sql>
         <comment>Inserted new record in table 'Buch_Entity'</comment>
     </changeSet>

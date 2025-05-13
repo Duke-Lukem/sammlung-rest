@@ -1,4 +1,4 @@
-package de.provinzial.schulung.service;
+package de.provinzial.schulung.service.buecher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.provinzial.schulung.persistenz.AutorEntity;
-import de.provinzial.schulung.persistenz.AutorenRepository;
-import de.provinzial.schulung.service.mapper.AutorMapper;
-import de.provinzial.schulung.service.model.AutorDTO;
+import de.provinzial.schulung.persistenz.buecher.model.AutorEntity;
+import de.provinzial.schulung.persistenz.buecher.repos.AutorenRepository;
+import de.provinzial.schulung.service.buecher.mapper.AutorMapper;
+import de.provinzial.schulung.service.buecher.model.AutorDTO;
 
 @Service
 public class AutorService {

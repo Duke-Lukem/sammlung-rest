@@ -1,4 +1,4 @@
-package de.provinzial.schulung.service.model;
+package de.provinzial.schulung.service.buecher.model;
 
 public class AutorDTO {
 

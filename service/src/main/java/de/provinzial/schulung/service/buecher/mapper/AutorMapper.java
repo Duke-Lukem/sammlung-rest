@@ -1,9 +1,9 @@
-package de.provinzial.schulung.service.mapper;
+package de.provinzial.schulung.service.buecher.mapper;
 
 import org.springframework.stereotype.Component;
 
-import de.provinzial.schulung.persistenz.AutorEntity;
-import de.provinzial.schulung.service.model.AutorDTO;
+import de.provinzial.schulung.persistenz.buecher.model.AutorEntity;
+import de.provinzial.schulung.service.buecher.model.AutorDTO;
 
 @Component
 public class AutorMapper {
@@ -18,9 +18,9 @@ public class AutorMapper {
 		return new AutorDTO(author.getId(), author.getName());
 	}
 
-	public AutorEntity toEntity(AutorDTO AutorDTO) {
-		AutorEntity author = new AutorEntity(AutorDTO.getName());
-		author.setId(AutorDTO.getId());
+	public AutorEntity toEntity(AutorDTO autorDTO) {
+		AutorEntity author = new AutorEntity(autorDTO.getName());
+		author.setId(autorDTO.getId());
 		return author;
 	}
 }

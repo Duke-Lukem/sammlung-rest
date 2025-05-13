@@ -1,10 +1,10 @@
-package de.provinzial.schulung.service.mapper;
+package de.provinzial.schulung.service.buecher.mapper;
 
 import org.springframework.stereotype.Component;
 
-import de.provinzial.schulung.persistenz.AutorEntity;
-import de.provinzial.schulung.persistenz.BuchEntity;
-import de.provinzial.schulung.service.model.BuchDTO;
+import de.provinzial.schulung.persistenz.buecher.model.AutorEntity;
+import de.provinzial.schulung.persistenz.buecher.model.BuchEntity;
+import de.provinzial.schulung.service.buecher.model.BuchDTO;
 
 @Component
 public class BuchMapper {

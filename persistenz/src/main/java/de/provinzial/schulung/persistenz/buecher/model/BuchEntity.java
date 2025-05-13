@@ -1,4 +1,4 @@
-package de.provinzial.schulung.persistenz;
+package de.provinzial.schulung.persistenz.buecher.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 

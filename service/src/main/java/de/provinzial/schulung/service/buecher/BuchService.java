@@ -1,4 +1,4 @@
-package de.provinzial.schulung.service;
+package de.provinzial.schulung.service.buecher;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.provinzial.schulung.persistenz.AutorEntity;
-import de.provinzial.schulung.persistenz.AutorenRepository;
-import de.provinzial.schulung.persistenz.BuchEntity;
-import de.provinzial.schulung.persistenz.BuecherRepository;
-import de.provinzial.schulung.service.mapper.BuchMapper;
-import de.provinzial.schulung.service.model.BuchDTO;
+import de.provinzial.schulung.persistenz.buecher.model.AutorEntity;
+import de.provinzial.schulung.persistenz.buecher.model.BuchEntity;
+import de.provinzial.schulung.persistenz.buecher.repos.AutorenRepository;
+import de.provinzial.schulung.persistenz.buecher.repos.BuecherRepository;
+import de.provinzial.schulung.service.buecher.mapper.BuchMapper;
+import de.provinzial.schulung.service.buecher.model.BuchDTO;
 
 @Service
 public class BuchService {

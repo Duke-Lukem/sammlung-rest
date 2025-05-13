@@ -1,9 +1,6 @@
-package de.provinzial.schulung.persistenz;
+package de.provinzial.schulung.persistenz.vinyl.model;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -14,7 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class AutorEntity {
+public class BandEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,15 +19,14 @@ public class AutorEntity {
 
 	private String name;
 
-	@OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JsonManagedReference
-	private Set<BuchEntity> buecher = new HashSet<>();
+	@OneToMany(mappedBy = "band", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<AlbumEntity> albums;
 
-	public AutorEntity() {
+	public BandEntity() {
 		super();
 	}
 
-	public AutorEntity(String name) {
+	public BandEntity(String name) {
 		super();
 		this.name = name;
 	}
@@ -51,12 +47,12 @@ public class AutorEntity {
 		this.name = name;
 	}
 
-	public Set<BuchEntity> getBuecher() {
-		return this.buecher;
+	public List<AlbumEntity> getAlbums() {
+		return this.albums;
 	}
 
-	public void setBuecher(Set<BuchEntity> buecher) {
-		this.buecher = buecher;
+	public void setAlbums(List<AlbumEntity> albums) {
+		this.albums = albums;
 	}
 
 }

@@ -1,4 +1,4 @@
-package de.provinzial.schulung.rest;
+package de.provinzial.schulung.rest.buecher.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.provinzial.schulung.service.BuchService;
-import de.provinzial.schulung.service.model.BuchDTO;
+import de.provinzial.schulung.service.buecher.BuchService;
+import de.provinzial.schulung.service.buecher.model.BuchDTO;
 
 @RestController
 @RequestMapping("/buecher")

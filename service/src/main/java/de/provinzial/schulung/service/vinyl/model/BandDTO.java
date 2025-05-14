@@ -1,0 +1,34 @@
+package de.provinzial.schulung.service.vinyl.model;
+
+public class BandDTO {
+
+	private Long id;
+	private String name;
+
+	public BandDTO() {
+		super();
+	}
+
+	public BandDTO(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public Long getId() {
+		return this.id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<databaseChangeLog
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+			xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+			xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+		
+		<changeSet author="W102350" id="2.1 Inserted Manga Sammlung One Piece">
+			<!-- Validations -->
+			<preConditions>
+				<tableExists tableName="BUCH_ENTITY"/>
+			</preConditions>
+			<!-- Create Table -->
+			<sql>
+			
+				INSERT INTO AUTOR_ENTITY (name) VALUES ('Eiichiro Oda');
+				
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 1 - Das Abenteuer beginnt', '3.2003', 'January 1, 2001', '9783551745811', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 2 - Ruffy versus Buggy, der Clown', '3.2003', 'September 1, 2003', '9783551745828', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 3 - Die Suche geht weiter', '1.2001', '2001-02-15', '9783551745835', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 4 - Wolf im Schafspelz', '2.2003', '2001-02-15', '9783551745842', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 5 - Wem schlägt jetzt die Stunde?', '2.2003', '2001-02-15', '9783551745859', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 6 - Das Gelübde', '2.2003', '2001-02-15', '9783551745866', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 7 - Der alte Mann', '2.2003', '2001-02-15', '9783551745873', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 8 - Wehe, du stirbst!', '2.2003', '2001-02-15', '9783551745880', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 9 - Tränen', '1.2001', '2001-02-15', '9783551745897', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 10 - O.K. Lets stand up!', '2.2003', '2001-02-15', '9783551756206', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 11 - Der schlimmste Typ im Osten', '2.2003', '2001-02-15', '9783551756213', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 12 - Der Anfang der Legende', '2.2003', '2001-02-15', '9783551756220', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 13 - Dont worry!', '1.2002', '2001-02-15', '9783551756237', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 14 - Instinkt', '1.2002', '2001-02-15', '9783551756244', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 15 - Volle Fahrt voraus', '1.2002', '2001-02-15', '9783551756251', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 16 - Erfüllter Wille', '1.2002', '2001-02-15', '9783551756268', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 17 - Baders Kirschbaum', '1.2002', '2001-02-15', '9783551756275', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 18 - Ace', '1.2002', '2001-02-15', '9783551756282', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 19 - Rebellion', '1.2002', '2001-02-15', '9783551756299', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 20 - Endkampf in Arbana', '1.2002', '2001-02-15', '9783551756305', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 21 - Utopia', '1.2002', '2001-02-15', '9783551756312', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 22 - Hope!!', '1.2002', '2001-02-15', '9783551756329', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 23 - Vivis Abenteuer', '1.2003', '2003-12-01', '9783551756336', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 24 - Träume', '1.2003', '2001-02-15', '9783551756343', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 25 - Der ist 100 Millionen wert!', '1.2003', '2003-06-22', '9783551756350', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));				
+				INSERT INTO BUCH_ENTITY (preis, name, auflage, erscheinungsjahr, isbn, autor_id) VALUES (5, 'ONE PIECE 26 - Abenteuer auf der Insel Gottes', '1.2003', '2003-08-01', '9783551756367', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda'));
+				
+<!-- 				INSERT INTO BUCH_ENTITY (preis, name, auflage, isbn, autor_id) VALUES (5, 'One Piece 2', '', '9783551756', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Eiichiro Oda')); -->
+			</sql>
+			<comment>Inserted new record in table 'Buch_Entity'</comment>
+		</changeSet>
+		
+		
+		
+	</databaseChangeLog>

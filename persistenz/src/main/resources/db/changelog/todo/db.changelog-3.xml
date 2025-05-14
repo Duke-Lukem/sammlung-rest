@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<databaseChangeLog
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+			xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+			xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	
+		<changeSet author="W102350" id="3.1 Inserted data in Autor table">
+			<!-- Validations -->
+			<preConditions>
+				<tableExists tableName="AUTOR_ENTITY"/>
+			</preConditions>
+			<!-- Create Table -->
+			<sql>
+				INSERT INTO AUTOR_ENTITY (name) VALUES ('Jonathan Stroud');
+			</sql>
+			<comment>Inserted new record in table 'Autor_Entity'</comment>
+		</changeSet>
+		
+		<changeSet author="W102350" id="3.2 Inserted data in Buch table">
+			<!-- Validations -->
+			<preConditions>
+				<tableExists tableName="BUCH_ENTITY"/>
+			</preConditions>
+			<!-- Create Table -->
+			<sql>
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (14.99, 'Bartimäus - Das Amulett von Samarkand', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '9783570216958');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (15.99, 'Bartimäus - Das Auge des Golem', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '978-3-442-37003-0');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (16.99, 'Bartimäus - Die Pforte des Magiers', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '978-3-442-37333-8');
+				INSERT INTO BUCH_ENTITY (preis, name, autor_id, isbn) VALUES (17.99, 'Bartimäus - Der Ring des Salomo', (SELECT id FROM AUTOR_ENTITY WHERE name = 'Jonathan Stroud'), '9783570223048');
+			</sql>
+			<comment>Inserted new record in table 'Buch_Entity'</comment>
+		</changeSet>
+		
+		<changeSet id="2.3" author="W102350">
+		    <customChange class="de.provinzial.schulung.persistenz.MyCustomChange">
+		    </customChange>
+		</changeSet>
+		
+		
+	</databaseChangeLog>

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>de.provinzial.schulung</groupId>
-	<artifactId>rest</artifactId>
+	<artifactId>service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rest</name>
-	<description>Demo project for Spring Boot</description>
+	<name>service</name>
+	<description>Demo project for Spring Boot Serviceschicht</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,16 +30,9 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>de.provinzial.schulung</groupId>
-			<artifactId>service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
@@ -48,6 +41,17 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<dependency>
+			<groupId>de.provinzial.schulung</groupId>
+			<artifactId>persistenz</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		</dependency>
+
 	</dependencies>
 
 <!--	<build>-->

@@ -1,9 +1,13 @@
 package de.provinzial.schulung.persistenz;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class BuchEntity {
@@ -13,23 +17,43 @@ public class BuchEntity {
 	private Long id;
 	private Double preis;
 	private String name;
+	private String isbn;
+	private String auflage;
+	private String erscheinungsjahr;
 
-	/**
-	 *
-	 */
+	@ManyToOne
+	@JoinColumn(name = "autor_id")
+	@JsonBackReference
+	private AutorEntity autor;
+
 	public BuchEntity() {
 		super();
 	}
 
-	/**
-	 * @param id
-	 * @param preis
-	 * @param name
-	 */
-	public BuchEntity(Double preis, String name) {
+	public BuchEntity(Double preis, String name, String isbn, String auflage, String erscheinungsjahr, AutorEntity autor) {
 		super();
 		this.preis = preis;
 		this.name = name;
+		this.isbn = isbn;
+		this.auflage = auflage;
+		this.erscheinungsjahr = erscheinungsjahr;
+		this.autor = autor;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #id}.
+	 * @return das Attribut {@link #id}
+	 */
+	public Long getId() {
+		return this.id;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #id}.
+	 * @param id
+	 */
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	/**
@@ -62,6 +86,70 @@ public class BuchEntity {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #isbn}.
+	 * @return das Attribut {@link #isbn}
+	 */
+	public String getIsbn() {
+		return this.isbn;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #isbn}.
+	 * @param isbn
+	 */
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #autor}.
+	 * @return das Attribut {@link #autor}
+	 */
+	public AutorEntity getAutor() {
+		return this.autor;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #autor}.
+	 * @param autor
+	 */
+	public void setAutor(AutorEntity autor) {
+		this.autor = autor;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #auflage}.
+	 * @return das Attribut {@link #auflage}
+	 */
+	public String getAuflage() {
+		return this.auflage;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #auflage}.
+	 * @param auflage
+	 */
+	public void setAuflage(String auflage) {
+		this.auflage = auflage;
+	}
+
+	/**
+	 * Antwortet das Attribut {@link #erscheinungsjahr}.
+	 * @return das Attribut {@link #erscheinungsjahr}
+	 */
+	public String getErscheinungsjahr() {
+		return this.erscheinungsjahr;
+	}
+
+	/**
+	 * Setzt das Attribut {@link #erscheinungsjahr}.
+	 * @param erscheinungsjahr
+	 */
+	public void setErscheinungsjahr(String erscheinungsjahr) {
+		this.erscheinungsjahr = erscheinungsjahr;
 	}
 
 }
